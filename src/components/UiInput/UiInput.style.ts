@@ -1,6 +1,10 @@
 import { styled } from 'styled-components'
 
-export const Input = styled.input`
+type Props = {
+  $error: boolean
+}
+
+export const Input = styled.input<Props>`
   height: calc(2.25rem + 2px);
   padding: 0.375rem 0.75rem;
   font-family: inherit;
@@ -9,7 +13,8 @@ export const Input = styled.input`
   color: #212529;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid #bdbdbd;
+  border: ${({ $error }) =>
+    $error === true ? '2px solid #EB5757' : '1px solid #bdbdbd'};
   border-radius: 0.25rem;
   outline: none;
 `

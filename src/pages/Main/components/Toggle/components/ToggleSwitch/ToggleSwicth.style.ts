@@ -1,5 +1,9 @@
 import { styled } from 'styled-components'
 
+type Props = {
+  $active: boolean
+}
+
 export const Container = styled.div`
   display: flex;
   flex-direction: row;
@@ -12,7 +16,7 @@ export const SwitchInput = styled.input`
   visibility: hidden;
 `
 
-export const SwitchLabel = styled.label`
+export const SwitchLabel = styled.label<Props>`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -22,11 +26,13 @@ export const SwitchLabel = styled.label`
   border-radius: 32px;
   border: 1px solid #cccccc;
   position: relative;
-  background-color: #ffffff;
+  background-color: ${({ $active }) =>
+    $active === true ? '#7a5cfa;' : '#ffffff;'} 
   margin-right: 10px;
+  
 `
 
-export const SwitchButton = styled.button`
+export const SwitchButton = styled.span`
   position: absolute;
   margin: 3px;
   width: 18px;
@@ -38,7 +44,7 @@ export const SwitchButton = styled.button`
   ${SwitchInput}:checked + ${SwitchLabel} & {
     left: calc(100% - 6px);
     transform: translateX(-100%);
-    background-color: #FFFFFF;
+    background-color: #ffffff;
   }
 `
 

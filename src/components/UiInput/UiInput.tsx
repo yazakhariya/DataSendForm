@@ -8,6 +8,7 @@ type Props = {
   name?: string
   id?: string
   onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void
+  error: boolean
 }
 
 const UiInput = ({
@@ -18,6 +19,7 @@ const UiInput = ({
   name,
   id,
   onBlur,
+  error
 }: Props) => {
   return (
     <S.Input
@@ -28,6 +30,7 @@ const UiInput = ({
       type={type}
       name={name}
       onBlur={onBlur}
+      $error={error}
     />
   )
 }

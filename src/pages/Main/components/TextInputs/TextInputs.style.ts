@@ -30,7 +30,11 @@ export const ErrorBox = styled.div`
 `
 
 export const ErrorMessage = styled.p`
-  color: #EB5757;
+  color: #eb5757;
   font-weight: 700;
   width: 350px;
+`
+
+export const ErrorImg = styled.img`
+  width: 20px;
 `
