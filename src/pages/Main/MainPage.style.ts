@@ -16,5 +16,6 @@ export const FormWrapper = styled.div`
   gap: 8px;
   align-items: flex-start;
   padding: 40px;
-  position: fixed;
+  position: relative;
+  margin: 50px;
 `
