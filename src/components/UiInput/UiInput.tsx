@@ -8,7 +8,7 @@ type Props = {
   name?: string
   id?: string
   onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void
-  error: boolean
+  error?: boolean
 }
 
 const UiInput = ({

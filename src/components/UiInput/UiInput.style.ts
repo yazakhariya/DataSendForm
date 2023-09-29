@@ -1,7 +1,7 @@
 import { styled } from 'styled-components'
 
 type Props = {
-  $error: boolean
+  $error?: boolean
 }
 
 export const Input = styled.input<Props>`
