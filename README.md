@@ -16,3 +16,4 @@ npm run dev
 ```
 ## Деплой проекта
 
+https://data-send-form-iwbi.vercel.app/
